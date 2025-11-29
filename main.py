@@ -16,7 +16,7 @@ fig1 = px.line(df,
 fig1.update_layout(xaxis_title = 'Data', yaxis_title = 'Número de Casos Acumulados', title_font_size = 30)
 fig1.show()
 
-st.ploty_chart(fig1, use_container_width = True)
+st.plotly_chart(fig1, use_container_width = True)
 
 
 df_brasil_usa_india = df.query('Country in ["Brazil", "India", "United States of America"]')
@@ -26,4 +26,4 @@ fig2 = px.pie(df_brasil_usa_india, values='Cumulative_cases', names='Country',
 fig2.update_layout(title_font_size = 30)
 fig2.show()
 
-st.ploty_chart(fig2, use_container_width = True)
+st.plotly_chart(fig2, use_container_width = True)
